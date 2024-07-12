@@ -1,4 +1,5 @@
 class Item:
+    from ownable import set_owner
     instances = []
 
     def __init__(self, name, price, owner=None):
@@ -13,5 +14,5 @@ class Item:
 
     @staticmethod
     def item_all():
-        # instancesを返します ==> Item.item_all()でこれまでに生成されたItemインスタンスを全て返すということです。
+        # Al crear una instancia de Item, esa instancia de Item (self) se almacena en una variable de clase llamada instances.
         return Item.instances
